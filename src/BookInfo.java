@@ -9,17 +9,18 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import java.io.IOException;
+import java.io.File;
 
 public class BookInfo {
     private String bookName;
     private String authorFirstName;
     private String authorLastName;
 
-    public void readFileInfo(String pathName) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
+    public void readFileInfo(File file) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
 
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder  = builderFactory.newDocumentBuilder();
-        Document xmlDocument = builder.parse(pathName);
+        Document xmlDocument = builder.parse(file);
 
         XPath xPath = XPathFactory.newInstance().newXPath();
 
