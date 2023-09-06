@@ -10,16 +10,10 @@ public class Main {
         System.out.println("Укажиье путь к директории: ");
         String path = scanner.nextLine();
 
-        System.out.println("Вы указали каталог: " + path);
-
         File[] files = null;
 
         try{
-
             File dir = new File(path);
-
-            System.out.println("dir is: " + dir.getPath());
-
             files = dir.listFiles(f -> f.getName().endsWith(".fb2"));
         }catch (Exception exp){
             System.out.println(exp.toString());
