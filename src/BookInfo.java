@@ -16,7 +16,7 @@ public class BookInfo {
     private String authorFirstName;
     private String authorLastName;
 
-    public void readFileInfo(File file) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
+    public void readFb2Info(File file) throws ParserConfigurationException, IOException, SAXException, XPathExpressionException {
 
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder  = builderFactory.newDocumentBuilder();
@@ -27,6 +27,7 @@ public class BookInfo {
         authorFirstName = (String) xPath.compile("//description/title-info/author/first-name").evaluate(xmlDocument, XPathConstants.STRING);
         authorLastName = (String) xPath.compile("//description/title-info/author/last-name").evaluate(xmlDocument, XPathConstants.STRING);
         bookName  = (String)xPath.compile("//description/title-info/book-title").evaluate(xmlDocument, XPathConstants.STRING);
+
 
     }
 
