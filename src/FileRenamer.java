@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class RenamingFiles {
+public class FileRenamer {
     public void FileRename(String path){
 
         File dir = new File(path);
