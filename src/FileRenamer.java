@@ -24,9 +24,9 @@ public class FileRenamer {
             Path bookName = null;
 
             if (file.getName().endsWith(".fb2")){
-                bookName = getPathFb2(file);
+                bookName = getNewPathFb2(file);
             }else {
-                bookName = getPathZip(file);
+                bookName = getNewPathZip(file);
             }
 
             if(bookName == null)
@@ -45,7 +45,7 @@ public class FileRenamer {
 
     }
 
-    private Path getPathZip(File file) {
+    private Path getNewPathZip(File file) {
 
         Path bookName = null;
 
@@ -83,7 +83,7 @@ public class FileRenamer {
         return bookName;
     }
 
-    private Path getPathFb2(File file) {
+    private Path getNewPathFb2(File file) {
         Path bookName;
         System.out.println(file.getName());
 
@@ -100,6 +100,4 @@ public class FileRenamer {
         bookName = Paths.get(file.getParent(), bookInfo.getBookName() + ".fb2");
         return bookName;
     }
-
-
 }
