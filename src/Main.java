@@ -10,9 +10,5 @@ public class Main {
 
         FileRenamer renamingFiles = new FileRenamer();
         renamingFiles.FileRename(path);
-
-
-
-
     }
 }
